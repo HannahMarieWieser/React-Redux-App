@@ -3,15 +3,16 @@ import {connect} from 'react-redux'
 import Loader from 'react-loader-spinner'
 import Mission from './Mission'
 
-import {getData} from './actions'
+import { getData } from '../actions/index'
 
 const MissionList = props => {
+    console.log('mission props', props)
     return (
         <>
             <h1>SpaceX Launch-data App</h1>
             <button onClick={props.getData}>
                 {props.isLoading ? (
-                    <Loader type="tailspin" color="#00BFFF" height="15" width="100" /> 
+                    <Loader type="Circles" color="#FF0000" height="50" width="100" /> 
                 ):(
                     'Get SpaceX Launch Data'
                 )}
